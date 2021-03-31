@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* rem taille d'un composant par rapport au composant racine */
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+
+h2 {
+    font-size: 4.6rem;
+}
+
+
+h3 {
+    font-size: 3.0rem;
+    font-weight: normal;
+}
+
+h4,h5 {
+    font-size: 2.8rem;
+}
+
+li {
+
+    font-size: 2rem;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+/* HEADER, barre de navigation */
+
+.main-head {
+    background: #5e7669;
+    color: white;
+
+}
+
+/* 1vh = 1% du viewport height */
+nav {
+    min-height: 10vh;
+    display: flex; /* mettre h1 à coté de ul */
+    justify-content: space-around; /* espace entre les li */
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    /* responsive */
+    flex-wrap: wrap;
+
+}
+
+nav ul {
+    display: flex; /* mettre les li l'un à coté de l'autre */
+    flex: 1 1 40rem;
+    justify-content: space-around; /* espace entre les li */
+    align-items: center;
+    list-style: none;
+
+}
+
+/* écran partagé en 3 1/3 pour le logo et 1/3 pour les ul */
+#logo {
+    flex: 1 1 40rem; /* flex permet d'étendre un composant pour utiliser l'espace ibre */
+    font-family: 'Pacifico', cursive;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 90vh; /* faire occuper au composant tout le reste de la page */
+    background-image: linear-gradient(rgb(0, 0, 0, 0.4), transparent), url("../images/ligue1.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-left: 50px;
+
+    
+
+}
+
+
+@media screen and (max-width: 885px) {
+    html{
+        font-size: 45%;
+    }
+    nav {
+        text-align: center;
+    }
+    #logo {
+        padding: 2rem;
+    }
+}
